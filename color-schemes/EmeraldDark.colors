@@ -56,7 +56,7 @@ ForegroundInactive=102,106,115
 ForegroundLink=0,168,255
 ForegroundNegative=41,189,13
 ForegroundNeutral=255,106,0
-ForegroundNormal=211,218,227
+ForegroundNormal=11,212,135
 ForegroundPositive=113,247,159
 ForegroundVisited=77,0,250
 
@@ -99,7 +99,7 @@ contrast=0
 [WM]
 activeBackground=12,14,20
 activeBlend=22,25,37
-activeForeground=211,218,227
+activeForeground=0,188,128
 inactiveBackground=22,25,37
 inactiveBlend=22,25,37
-inactiveForeground=102,106,115
+inactiveForeground=1,77,52
