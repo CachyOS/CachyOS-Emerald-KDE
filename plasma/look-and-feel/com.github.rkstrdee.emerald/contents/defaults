@@ -20,7 +20,7 @@ LayoutName=org.kde.breeze.desktop
 library=org.kde.breeze
 
 [plasmarc][Theme]
-name=Emerald-color
+name=cachyos-emerald-color
 
 [Wallpaper]
 Image=Skyscraper
