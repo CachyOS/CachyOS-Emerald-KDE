@@ -9,14 +9,14 @@ saturation=1.4
 
 [Desktop Entry]
 Comment=A dark and modern theme for Plasma 5
-Name=Emerald
+Name=cachyos-emerald
 X-KDE-PluginInfo-Author=Dharam Dhurandhar
 X-KDE-PluginInfo-Category=Plasma Theme
 X-KDE-PluginInfo-Depends=
 X-KDE-PluginInfo-Email=rkstrdee@gmail.com
 X-KDE-PluginInfo-EnabledByDefault=true
 X-KDE-PluginInfo-License=GPL3.0
-X-KDE-PluginInfo-Name=Emerald
+X-KDE-PluginInfo-Name=cachyos-emerald
 X-KDE-PluginInfo-Version=1.0.5
 X-KDE-PluginInfo-Website=
 X-Plasma-API=5.0
@@ -24,5 +24,5 @@ X-Plasma-API=5.0
 [Wallpaper]
 defaultFileSuffix=.png
 defaultHeight=1080
-defaultWallpaperTheme=Emerald
+defaultWallpaperTheme=Skyscraper
 defaultWidth=1920
