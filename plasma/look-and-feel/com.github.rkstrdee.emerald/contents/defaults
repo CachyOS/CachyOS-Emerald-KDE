@@ -11,10 +11,10 @@ Theme=Tela-circle-manjaro-dark
 widgetStyle=breeze
 
 [kwinrc][WindowSwitcher]
-LayoutName=org.kde.breeze.desktop
+LayoutName=big_icons
 
 [kwinrc][DesktopSwitcher]
-LayoutName=org.kde.breeze.desktop
+LayoutName=big_icons
 
 [kwinrc][org.kde.kdecoration2]
 library=org.kde.breeze
