@@ -5,7 +5,7 @@ cursorTheme=breeze_cursors
 ColorScheme=EmeraldDark
 
 [kdeglobals][Icons]
-Theme=Tela-circle-manjaro-dark
+Theme=char-white
 
 [kdeglobals][KDE]
 widgetStyle=breeze
