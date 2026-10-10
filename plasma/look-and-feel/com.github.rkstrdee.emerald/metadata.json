@@ -1,0 +1,20 @@
+{
+    "KPackageStructure": "Plasma/LookAndFeel",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "rkstrdee@gmail.com",
+                "Name": "Dharam Dhurandhar"
+            }
+        ],
+        "Category": "",
+        "Description": "A simple dark Plasma theme for CachyOS",
+        "Id": "com.github.rkstrdee.emerald",
+        "License": "GPLv2+",
+        "Name": "Emerald",
+        "Version": "3.0",
+        "Website": "https://github.com/CachyOS/CachyOS-Emerald-KDE"
+    },
+    "Keywords": "Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;",
+    "X-Plasma-APIVersion": "2"
+}

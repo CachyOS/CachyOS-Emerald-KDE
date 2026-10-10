@@ -1,0 +1,19 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "rkstrdee@gmail.com",
+                "Name": "Dharam Dhurandhar"
+            }
+        ],
+        "Category": "",
+        "Description": "A dark and modern theme for Plasma that follows the color scheme",
+        "EnabledByDefault": true,
+        "Id": "cachyos-emerald-color",
+        "License": "GPL-3.0",
+        "Name": "CachyOS Emerald Color",
+        "Version": "2.0.0",
+        "Website": "https://github.com/CachyOS/CachyOS-Emerald-KDE"
+    },
+    "X-Plasma-API": "5.0"
+}

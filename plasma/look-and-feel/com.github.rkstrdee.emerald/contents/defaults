@@ -1,5 +1,5 @@
-[kcminputrc][Mouse]
-cursorTheme=breeze_cursors
+[kdeglobals][KDE]
+widgetStyle=Breeze
 
 [kdeglobals][General]
 ColorScheme=EmeraldDark
@@ -7,23 +7,18 @@ ColorScheme=EmeraldDark
 [kdeglobals][Icons]
 Theme=char-white
 
-[kdeglobals][KDE]
-widgetStyle=breeze
+[plasmarc][Theme]
+name=cachyos-emerald-color
+
+[kcminputrc][Mouse]
+cursorTheme=breeze_cursors
 
 [kwinrc][WindowSwitcher]
 LayoutName=big_icons
 
-[kwinrc][DesktopSwitcher]
-LayoutName=big_icons
-
 [kwinrc][org.kde.kdecoration2]
 library=org.kde.breeze
+theme=Breeze
 
-[plasmarc][Theme]
-name=cachyos-emerald-color
-
-[Wallpaper]
-Image=Skyscraper
-
-
-
+[ksplashrc][KSplash]
+Theme=com.github.rkstrdee.emerald

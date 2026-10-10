@@ -1,162 +1,29 @@
-var plasma = getApiVersion(1);
-
-var layout = {
-    "desktops": [
-        {
-            "applets": [
-            ],
-            "config": {
-                "/": {
-                    "formfactor": "0",
-                    "immutability": "1",
-                    "lastScreen": "-1",
-                    "wallpaperplugin": "org.kde.image"
-                },
-                "/Configuration": {
-                    "PreloadWeight": "0"
-                }
-            },
-            "wallpaperPlugin": "org.kde.image"
-        },
-        {
-            "applets": [
-            ],
-            "config": {
-                "/": {
-                    "formfactor": "0",
-                    "immutability": "1",
-                    "lastScreen": "0",
-                    "wallpaperplugin": "org.kde.image"
-                },
-                "/ConfigDialog": {
-                    "DialogHeight": "480",
-                    "DialogWidth": "640"
-                },
-                "/General": {
-                    "showToolbox": "false"
-                },
-                "/Wallpaper/org.kde.image/General": {
-                    "Image": "file:///home/lara/Imágenes/stretched-1366-768-320259.jpg"
-                }
-            },
-            "wallpaperPlugin": "org.kde.image"
-        }
-    ],
-    "panels": [
-        {
-            "alignment": "left",
-            "applets": [
-                {
-                    "config": {
-                        "/": {
-                            "immutability": "1"
-                        },
-                        "/Configuration": {
-                            "PreloadWeight": "100"
-                        },
-                        "/Configuration/ConfigDialog": {
-                            "DialogHeight": "480",
-                            "DialogWidth": "640"
-                        },
-                        "/Configuration/General": {
-                            "favoritesPortedToKAstats": "true",
-                            "icon": "start-here-kde"
-                        },
-                        "/Shortcuts": {
-                            "global": "Alt+F1"
-                        }
-                    },
-                    "plugin": "org.kde.plasma.kickoff"
-                },
-                
-                {
-                  "config": {
-                      "/": {
-                          "immutability": "1"
-                      },
-                      "/Configuration": {
-                          "PreloadWeight": "0"
-                      },
-                      "/Configuration/General": {
-                          "length": "1108"
-                      }
-                  },
-                  "plugin": "org.kde.plasma.panelspacer"
-              },
-              {
-                "config": {
-                    "/": {
-                        "immutability": "1"
-                    },
-                    "/Configuration": {
-                        "PreloadWeight": "0"
-                    }
-                },
-                "plugin": "org.kde.plasma.icontasks"
-            },
-                {
-                    "config": {
-                        "/": {
-                            "immutability": "1"
-                        },
-                        "/Configuration": {
-                            "PreloadWeight": "0"
-                        },
-                        "/Configuration/General": {
-                            "length": "1108"
-                        }
-                    },
-                    "plugin": "org.kde.plasma.panelspacer"
-                },
-                {
-                    "config": {
-                        "/": {
-                            "immutability": "1"
-                        },
-                        "/Configuration": {
-                            "PreloadWeight": "0"
-                        }
-                    },
-                    "plugin": "org.kde.plasma.systemtray"
-                },
-                {
-                    "config": {
-                        "/": {
-                            "immutability": "1",
-                            "showDate":false
-                        },
-                        "/Configuration": {
-                            "PreloadWeight": "0"
-                        }
-                    },
-                    "plugin": "org.kde.plasma.digitalclock"
-                }
-            ],
-            "config": {
-                "/": {
-                    "formfactor": "2",
-                    "immutability": "1",
-                    "lastScreen": "0",
-                    "wallpaperplugin": "org.kde.image"
-                },
-                "/ConfigDialog": {
-                    "DialogHeight": "82",
-                    "DialogWidth": "1366"
-                },
-                "/Configuration": {
-                    "PreloadWeight": "0"
-                }
-            },
-            "height": 1.8,
-            "hiding": "normal",
-            "location": "bottom",
-            "maximumLength": 85.375,
-            "minimumLength": 85.375,
-            "offset": 0
-        }
-    ],
-    "serializationFormatVersion": "1"
+var desktopsArray = desktopsForActivity(currentActivity());
+for (var j = 0; j < desktopsArray.length; j++) {
+    desktopsArray[j].wallpaperPlugin = "org.kde.image";
+    // Shipped by the cachyos-wallpapers package
+    desktopsArray[j].currentConfigGroup = ["Wallpaper", "org.kde.image", "General"];
+    desktopsArray[j].writeConfig("Image", "file:///usr/share/wallpapers/cachyos-wallpapers/Skyscraper.png");
 }
-;
 
-plasma.loadSerializedLayout(layout);
+var panel = new Panel;
+panel.location = "bottom";
+// Round up to the next even number, the panel size widget only shows even sizes
+panel.height = 2 * Math.ceil(gridUnit * 2.25 / 2);
+
+var kickoff = panel.addWidget("org.kde.plasma.kickoff");
+kickoff.currentConfigGroup = ["Shortcuts"];
+kickoff.writeConfig("global", "Alt+F1");
+kickoff.currentConfigGroup = ["General"];
+kickoff.writeConfig("icon", "start-here-kde");
+
+// Expanding spacers on both sides keep the task manager centered
+panel.addWidget("org.kde.plasma.panelspacer");
+panel.addWidget("org.kde.plasma.icontasks");
+panel.addWidget("org.kde.plasma.panelspacer");
+
+panel.addWidget("org.kde.plasma.systemtray");
+
+var clock = panel.addWidget("org.kde.plasma.digitalclock");
+clock.currentConfigGroup = ["Appearance"];
+clock.writeConfig("showDate", false);
